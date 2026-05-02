@@ -2,9 +2,9 @@ package com.task.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.cors.*;
 
 import java.util.List;
 
@@ -22,11 +22,11 @@ public class SecurityConfig {
                 config.setAllowCredentials(true);
                 config.setAllowedOrigins(List.of(
                     "http://localhost:5173",
-                    "https://task-manager-frontend-5xwuajlmg-sahilrwat9876-6435s-projects.vercel.app"
+                    "https://task-manager-frontend-47esc7cgo-sahilrwat9876-6435s-projects.vercel.app"
                 ));
 
-                config.setAllowedHeaders(List.of("*"));
                 config.setAllowedMethods(List.of("*"));
+                config.setAllowedHeaders(List.of("*"));
 
                 return config;
             }))

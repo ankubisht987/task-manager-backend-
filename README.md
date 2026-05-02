@@ -25,8 +25,8 @@ This is a full-stack Task Manager application where users can sign up, log in, a
 
 ## Live Links
 
-* Frontend: https://your-frontend.vercel.app
-* Backend: https://your-backend.up.railway.app/api
+* Frontend: https://task-manager-frontend-dpf227cy9-sahilrwat9876-6435s-projects.vercel.app/
+* Backend: https://task-manager-backend-production-e668.up.railway.app/api/test
 
 ---
 

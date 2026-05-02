@@ -20,9 +20,11 @@ public class SecurityConfig {
                 CorsConfiguration config = new CorsConfiguration();
 
                 config.setAllowCredentials(true);
-                config.setAllowedOrigins(List.of(
+
+                // ✅ FIX HERE
+                config.setAllowedOriginPatterns(List.of(
                     "http://localhost:5173",
-                    "https://task-manager-frontend-47esc7cgo-sahilrwat9876-6435s-projects.vercel.app"
+                    "https://*.vercel.app"
                 ));
 
                 config.setAllowedMethods(List.of("*"));

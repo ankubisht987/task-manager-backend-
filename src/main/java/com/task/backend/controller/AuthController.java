@@ -24,7 +24,7 @@ public class AuthController {
 
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    // ✅ SIGNUP
+    
     @PostMapping("/signup")
     public ResponseEntity<?> signup(@RequestBody User user) {
 
@@ -40,7 +40,7 @@ public class AuthController {
         return ResponseEntity.ok(userRepository.save(user));
     }
 
-    // ✅ LOGIN (PROPER VALIDATION)
+    
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User user) {
 
@@ -59,7 +59,7 @@ public class AuthController {
         }
 
         User u = dbUser.get();
-        u.setPassword(null); // 🔥 hide password
+        u.setPassword(null);
 
         return ResponseEntity.ok(u);
     }
